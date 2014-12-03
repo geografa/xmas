@@ -1,16 +1,33 @@
 <html>
-	<head>
-		<link rel="stylesheet" href="compiled/flipclock.css">
-		<link rel="stylesheet" href="site.css">
+<head>
+	<link rel="stylesheet" href="compiled/flipclock.css">
+	<meta charset=utf-8 />
+	<title>Countdown</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
 
-		<script src="compiled/flipclock.js"></script>	
+	<link rel="stylesheet" href="site.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+	<script src="compiled/flipclock.js"></script>	
+
+	<style>
+	#map { position:absolute; top:0; bottom:0; width:100%; }
+	</style>
+
 	</head>
 	<body>
 		<div class="clock" style="margin:2em;"></div>
-		
-		<script type="text/javascript">
+		<div id='map'></div>
+<script>
+			L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JhZmEiLCJhIjoiU2U2QnIzUSJ9.4LnG05Ptvi1sUQ8t68rfgw';
+			var map = L.mapbox.map('map', 'grafa.iih2e33n', {
+    							maxZoom: 17
+    						})
+    						.setView([18.346623325001172,-64.73093032836914], 13);
+
 			var clock;
 
 			$(document).ready(function() {
@@ -33,6 +50,8 @@
 
 			});
 		</script>
+
+
 		
 	</body>
 </html>
