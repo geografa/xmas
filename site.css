@@ -1,8 +1,7 @@
 html { 
-  background: url(http://www.snowball.be/content/binary/29.jpg);/* no-repeat center center fixed; 
-  background: url(back.gif) no-repeat center center fixed; 
+  background: url(http://media.giphy.com/media/DugLtTiEpDh1C/giphy.gif) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;*/
+  background-size: cover;
 }
